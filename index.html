@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logosr.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mywork">My project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hii, I'm <span>Mandar</span> </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/Programming.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a BScIT student and enthusiastic fresher, I'm diving into the world of technology with curiosity and dedication. Eager to apply classroom knowledge to real-world scenarios, I'm excited to contribute and learn in equal measure. Ready to embrace challenges and cultivate practical skills in the dynamic field of IT.
+                    </p>
+
+                         <div class="tab-title">
+                            <p class="tab-links  active-link" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Certificates')">Certificates</p>
+                         </div>
+                         <div class="contents  active-tab" id="Education">
+                            <ul>
+                                <li><span>2018</span><br>Compeleted My 10th</li>
+                                <li><span>2020</span><br>Compleleted My 12th</li>
+                                <li><span>2023(Current)</span><br>pursing Bsc-IT</li>
+                            </ul>
+                         </div>
+
+                         <div class="contents"  id="Skills">
+                            <ul>
+                                <li><span>Fornt-End</span><br>HTML,CSS,JavaScrpit</li>
+                                <li><span>Back-End</span><br>Python,C,C++</li>
+                                <li><span>Database</span><br>SQL</li>
+                            </ul>
+                         </div>
+
+                         <div class="contents"  id="Certificates">
+                            <ul>
+                                <li><span>Course</span><br>Cyber Security<br><br>CSS, JavaScrpit, PHP</li>
+                             
+                            </ul>
+                         </div>
+                         
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <div id="mywork">
+   
+     <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="worklist">
+
+            <div class="work">
+
+                <img src="img/netflix.png">
+                <div class="layer">
+                    <h3>Netflix clone</h3>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+
+                <img src="img/temp.png">
+                <div class="layer">
+                    <h3>tempreture convertor</h3>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+
+            <div class="work">
+
+                <img src="img/calcs.png">
+                <div class="layer">
+                    <h3>calculator</h3>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+     </div>
+
+
+ </div>
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactL">
+               <h1 class="sub-title">Contact Me</h1>
+               <p><i class="fa-solid fa-paper-plane"></i>mandarghadigaonkar@gmail.com</p>
+               <p><i class="fa-solid fa-square-phone"></i>9869757567</p>
+               <div class="socialI">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                
+               </div>
+               <a href="img/mandar's Resume.pdf" class="btn">Download CV</a>
+            </div>
+            <div class="contactR">
+               <form >
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="text" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="btn  btn2">Submit</button>
+               </form> 
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Mandar</p>
+    </div>
+ </div>
+
+
+    
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+
+        var contents = document.getElementsByClassName("contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(content of contents){
+                content.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
